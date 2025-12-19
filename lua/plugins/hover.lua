@@ -8,6 +8,11 @@ return {
       "hover.providers.dap",
       "hover.providers.man",
       "hover.providers.dictionary",
+      {
+        module = "hover.providers.diagnostic",
+        priority = 2000,
+        name = "Diags",
+      },
       -- Optional:
       -- 'hover.providers.gh',
       -- 'hover.providers.gh_user',
@@ -16,7 +21,8 @@ return {
       -- 'hover.providers.highlight',
     },
     preview_opts = {
-      border = "single",
+      border = "none",
+      opacity = "100%",
     },
     preview_window = false,
     title = true,
@@ -27,8 +33,8 @@ return {
     require("hover").config(opts)
 
     -- Keymaps
-    vim.keymap.set("n", "K", require("hover").open, { desc = "hover.nvim (open)" })
-    vim.keymap.set("n", "gK", require("hover").enter, { desc = "hover.nvim (enter)" })
+    vim.keymap.set("n", "<leader>k", require("hover").open, { desc = "hover.nvim (open)" })
+    vim.keymap.set("n", "<leader>M", require("hover").enter, { desc = "hover.nvim (enter)" })
     vim.keymap.set("n", "<C-p>", function()
       require("hover").switch("previous")
     end, { desc = "hover.nvim (previous source)" })

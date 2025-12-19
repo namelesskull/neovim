@@ -6,14 +6,20 @@ return {
     require("hlchunk").setup({
       chunk = {
         enable = true,
+        priority = 15,
+        use_treesitter = true,
         chars = {
           horizontal_line = "─",
           vertical_line = "│",
           left_top = "╭",
           left_bottom = "╰",
-          right_arrow = ">",
+          right_arrow = "▶",
         },
         style = "#ffa500",
+      },
+      line_num = {
+        enable = true,
+        style = "#1e8c45",
       },
     })
   end,

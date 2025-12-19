@@ -17,7 +17,6 @@ return {
       auto_open = false,
       window = {
         width = 30,
-        title = "Exploler",
         position = "left",
         mappings = {
           ["l"] = "open",
@@ -49,9 +48,9 @@ return {
         },
         git_status = {
           symbols = {
-            unstaged = "●",
-            staged = "✓",
-            untracked = "?",
+            unstaged = "M",
+            staged = "A",
+            untracked = "U",
             deleted = "✖",
             ignored = "◌",
             renamed = "➜",

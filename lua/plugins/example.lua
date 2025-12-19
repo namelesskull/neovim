@@ -16,7 +16,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "moonfly",
     },
   },
 
@@ -153,6 +153,7 @@ return {
   },
 
   -- the opts function can also be used to change the default opts:
+
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
