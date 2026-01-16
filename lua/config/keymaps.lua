@@ -6,6 +6,14 @@ vim.keymap.set("i", "<C-o>a", function()
   return vim.api.nvim_replace_termcodes("<C-_>", true, true, true)
 end, { expr = true })
 
+-- back to normal mode
+vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })
+
+--Disable arrow mode Normal + Visual
+vim.keymap.set({ "n", "v" }, "<Up>", "<Nop>")
+vim.keymap.set({ "n", "v" }, "<Down>", "<Nop>")
+vim.keymap.set({ "n", "v" }, "<Left>", "<Nop>")
+vim.keymap.set({ "n", "v" }, "<Right>", "<Nop>")
 vim.keymap.set("n", "<leader>rr", function()
   vim.lsp.buf.rename()
 end, { desc = "LSP Rename" })

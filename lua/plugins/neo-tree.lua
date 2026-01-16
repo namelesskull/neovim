@@ -2,6 +2,8 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
+
+      hide_root_node = true, -- Hide the root node.
       sources = { "filesystem", "buffers", "git_status" },
       open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
       filesystem = {
@@ -13,6 +15,10 @@ return {
           hide_dotfiles = false,
           hide_gitignored = false,
         },
+      },
+      source_selector = {
+        winbar = true,
+        statusline = true,
       },
       auto_open = false,
       window = {
@@ -41,20 +47,29 @@ return {
       },
       default_component_configs = {
         indent = {
-          with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
-          expander_collapsed = "",
-          expander_expanded = "",
-          expander_highlight = "NeoTreeExpander",
+          indent_size = 2,
+          padding = 0.,
+          with_markers = true,
+          with_expanders = false,
+          indent_marker = "│",
+          last_indent_marker = "└",
+        },
+        icon = {
+          folder_closed = "",
+          folder_open = "",
+          folder_empty = "x",
+          folder_empty_open = "",
+          default = "🗎",
         },
         git_status = {
           symbols = {
-            unstaged = "M",
-            staged = "A",
-            untracked = "U",
-            deleted = "✖",
-            ignored = "◌",
-            renamed = "➜",
-            conflict = "⚔",
+            unstaged = "m",
+            staged = "a",
+            untracked = "u",
+            deleted = "d",
+            ignored = "i",
+            renamed = "r",
+            conflict = "c",
           },
         },
       },

@@ -2,7 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 --
-
+vim.o.guicursor = "n-v-c:block-blinkon500-blinkoff500," .. "i-ci:ver25-blinkon500-blinkoff500"
 vim.o.showcmd = true
 vim.o.showcmdloc = "statusline"
 

@@ -14,9 +14,9 @@ return {
 
     cmdline = {
       format = {
-        cmdline = { icon = "滅", title = "" },
+        -- cmdline = { icon = "滅", title = "" },
         -- cmdline = { icon = "⚔ ", title = "" },
-        -- cmdline = { icon = "_", title = "" },
+        cmdline = { icon = "_", title = "" },
         search_down = { icon = "" },
         search_up = { icon = "" },
         filter = { icon = "" },

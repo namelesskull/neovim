@@ -7,12 +7,13 @@ return {
       vim.opt.foldlevel = 99
       vim.opt.foldlevelstart = 99
     end,
-    opts = {
-      useLspFoldsWithTreesitterFallback = true,
-    },
+    opts = {},
     autoFold = {
       enabled = false,
       kinds = { "comment", "imports" }, ---@type lsp.FoldingRangeKind[]
+    },
+    foldKeymaps = {
+      enabled = false,
     },
   },
 }

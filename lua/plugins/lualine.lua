@@ -223,6 +223,7 @@ return {
     opts.options.disabled_filetypes = opts.options.disabled_filetypes or {}
     opts.options.disabled_filetypes.winbar = {
       "neo-tree",
+      "NvimTree",
       "dashboard",
       "alpha",
       "lazy",
