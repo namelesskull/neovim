@@ -7,6 +7,7 @@ return {
       top_down = false,
     },
     input = { enabled = false },
+    image = {},
     indent = {
       enabled = true,
       scope = {
