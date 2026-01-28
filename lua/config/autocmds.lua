@@ -44,3 +44,12 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "NeoTreeExpander", { fg = "#d1d1d1" })
   end,
 })
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local ft = vim.bo[args.buf].filetype
+    if ft == "javascript" then
+      vim.lsp.inlay_hint.enable(false, { bufnr = args.buf })
+    end
+  end,
+})

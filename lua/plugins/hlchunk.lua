@@ -18,7 +18,7 @@ return {
         style = "#ffa500",
       },
       line_num = {
-        enable = true,
+        enable = false,
         style = "#1e8c45",
       },
     })
