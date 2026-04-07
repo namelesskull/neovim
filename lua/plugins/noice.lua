@@ -16,7 +16,7 @@ return {
       format = {
         -- cmdline = { icon = "滅", title = "" },
         -- cmdline = { icon = "⚔ ", title = "" },
-        cmdline = { icon = "_", title = "" },
+        cmdline = { icon = " ", title = "" },
         search_down = { icon = "" },
         search_up = { icon = "" },
         filter = { icon = "" },
@@ -56,6 +56,13 @@ return {
       {
         view = "notify",
         filter = { event = "msg_showmode" },
+      },
+      {
+        filter = {
+          event = "notify",
+          find = "No information available",
+        },
+        opts = { skip = true },
       },
     },
   },

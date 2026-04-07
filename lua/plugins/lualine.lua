@@ -5,10 +5,18 @@ return {
     opts.sections.lualine_a = {
       {
         function()
-          return " Vim"
+          local v = vim.version()
+          if v then
+            return string.format(" NVIM %d.%d.%d", v.major, v.minor, v.patch)
+          end
+          return " NVIM"
         end,
-        separator = { left = "" },
         right_padding = 2,
+        color = {
+          fg = "#9FB4C7",
+          bg = "#1e222a",
+          gui = "bold",
+        },
       },
     }
 
@@ -216,8 +224,12 @@ return {
         function()
           return " " .. os.date("%R")
         end,
-        separator = { right = "" },
         left_padding = 2,
+        color = {
+          fg = "#9FB4C7",
+          bg = "#1e222a",
+          gui = "bold",
+        },
       },
     }
     opts.options.disabled_filetypes = opts.options.disabled_filetypes or {}
@@ -229,6 +241,17 @@ return {
       "lazy",
       "mason",
       "help",
+      "terminal",
+    }
+    opts.options.disabled_filetypes.statusline = {
+      "neo-tree",
+      "NvimTree",
+      "dashboard",
+      "alpha",
+      "lazy",
+      "mason",
+      "help",
+      "terminal",
     }
 
     local quotes = {

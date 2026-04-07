@@ -13,7 +13,7 @@ return {
           {
             filetype = "neo-tree",
             highlight = "Directory",
-            text = dir_name,
+            text = "󰄛 " .. dir_name,
             text_align = "left",
           },
           {

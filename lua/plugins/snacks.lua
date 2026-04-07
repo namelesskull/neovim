@@ -7,7 +7,14 @@ return {
       top_down = false,
     },
     input = { enabled = false },
-    image = {},
+    image = {
+      enabled = true,
+      doc = {
+        enabled = false,
+        max_width = 10,
+        max_height = 5,
+      },
+    },
     indent = {
       enabled = true,
       scope = {
