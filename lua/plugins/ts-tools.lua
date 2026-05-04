@@ -5,13 +5,13 @@ return {
     "neovim/nvim-lspconfig",
   },
   opts = {
-    settings = {
-      tsserver_file_preferences = {
-        includeInlayParameterNameHints = "all",
-        includeInlayFunctionParameterTypeHints = false,
-        allowJs = true,
-        jsx = "react-jsx",
-      },
-    },
+    -- settings = {
+    --   tsserver_file_preferences = {
+    --     includeInlayParameterNameHints = "all",
+    --     includeInlayFunctionParameterTypeHints = false,
+    --     allowJs = true,
+    --     jsx = "react-jsx",
+    --   },
+    -- },
   },
 }
