@@ -7,9 +7,9 @@ return {
         function()
           local v = vim.version()
           if v then
-            return string.format(" NVIM %d.%d.%d", v.major, v.minor, v.patch)
+            return string.format(" VIM %d.%d.%d", v.major, v.minor, v.patch)
           end
-          return " NVIM"
+          return " VIM"
         end,
         right_padding = 2,
         color = {
@@ -244,8 +244,6 @@ return {
       "terminal",
     }
     opts.options.disabled_filetypes.statusline = {
-      "neo-tree",
-      "NvimTree",
       "dashboard",
       "alpha",
       "lazy",
@@ -256,6 +254,7 @@ return {
 
     local quotes = {
       "Talk is cheap, show me the code.",
+      "Do One Thing Well",
     }
 
     local buf_quotes = {}

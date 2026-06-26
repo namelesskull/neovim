@@ -1,3 +1,10 @@
+vim.keymap.set("n", "<leader>gr", function()
+  require("telescope.builtin").git_branches({
+    show_remote_tracking_branches = false,
+  })
+end, {
+  desc = "Local git branches",
+})
 vim.keymap.set("i", "<C-\\>", "<Esc>", { noremap = true, silent = true })
 vim.keymap.set("v", "<C-\\>", "<Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>fe", ":Neotree<CR>", { desc = "Focus Explorer" })
