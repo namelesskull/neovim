@@ -1,3 +1,20 @@
+-- alias
+local aliases = {
+  W = "w",
+  Wq = "wq",
+  WQ = "wq",
+  Wqa = "wqa",
+  WQa = "wqa",
+  WQA = "wqa",
+  Q = "q",
+  Qa = "qa",
+  QA = "qa",
+}
+
+for alias, cmd in pairs(aliases) do
+  vim.api.nvim_create_user_command(alias, cmd, {})
+end
+
 vim.keymap.set("n", "<leader>gr", function()
   require("telescope.builtin").git_branches({
     show_remote_tracking_branches = false,
@@ -5,6 +22,7 @@ vim.keymap.set("n", "<leader>gr", function()
 end, {
   desc = "Local git branches",
 })
+vim.keymap.set("n", "<leader>gR", "<cmd>Telescope git_branches<CR>", { desc = "Git branches" })
 vim.keymap.set("i", "<C-\\>", "<Esc>", { noremap = true, silent = true })
 vim.keymap.set("v", "<C-\\>", "<Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>fe", ":Neotree<CR>", { desc = "Focus Explorer" })
