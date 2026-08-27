@@ -26,6 +26,9 @@ return {
     },
 
     views = {
+      hover = {
+        border = { style = "single", padding = { 0, 0 } },
+      },
       cmdline_popup = {
         relative = "editor",
         position = { row = "100%", col = 0 },
