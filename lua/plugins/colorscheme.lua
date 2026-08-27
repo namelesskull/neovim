@@ -1,9 +1,30 @@
+-- return {
+--   "bluz71/vim-moonfly-colors",
+--   name = "moonfly",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     vim.cmd("colorscheme moonfly")
+--   end,
+-- }
+--
+-- Using Lazy
 return {
-  "bluz71/vim-moonfly-colors",
-  name = "moonfly",
-  lazy = false,
+  "navarasu/onedark.nvim",
   priority = 1000,
   config = function()
-    vim.cmd("colorscheme moonfly")
+    require("onedark").setup({
+      style = "darker",
+
+      highlights = {
+        Normal = { bg = "#000000" },
+        NormalFloat = { bg = "#000000" },
+        SignColumn = { bg = "#000000" },
+        FoldColumn = { bg = "#000000" },
+        EndOfBuffer = { bg = "#000000" },
+      },
+    })
+
+    require("onedark").load()
   end,
 }
