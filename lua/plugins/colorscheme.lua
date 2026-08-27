@@ -14,8 +14,14 @@ return {
   priority = 1000,
   config = function()
     require("onedark").setup({
-      style = "darker",
-
+      style = "warmer",
+      code_style = {
+        comments = "none",
+        keywords = "none",
+        functions = "none",
+        strings = "none",
+        variables = "none",
+      },
       highlights = {
         Normal = { bg = "#000000" },
         NormalFloat = { bg = "#000000" },
