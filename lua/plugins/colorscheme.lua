@@ -26,7 +26,7 @@ return {
         NeoTreeNormal = { bg = "#000000" },
         NeoTreeNormalNC = { bg = "#000000" },
         NeoTreeEndOfBuffer = { bg = "#000000" },
-        NeoTreeWinSeparator = { bg = "#000000", fg = "#324376" },
+        NeoTreeWinSeparator = { bg = "#000000", fg = "#30323D" },
         TreesitterContext = { bg = "#30323D" },
         Normal = { bg = "#000000" },
         NormalFloat = { bg = "#000000" },
